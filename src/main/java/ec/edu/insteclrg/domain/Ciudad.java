@@ -5,19 +5,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 public class Ciudad {
-	@Id 
+	@Id
 	@Getter
 	@Setter
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(updatable=false,nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(updatable = false, nullable = false)
 	private Long id;
-	
-	@Column(nullable=false, unique=true)
+
+	@Column(nullable = false)
 	private String nombre;
 	
+	@ManyToOne
+	@JoinColumn
+	private Provincia provincia;
 }
