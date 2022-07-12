@@ -19,7 +19,11 @@ public class Provincia {
 	@Column(updatable=false,nullable=false)
 	private Long id;
 	
-	@Column(nullable=false, unique=true)
+	@Column(nullable=false, unique= true)
 	private String nombre;
-	
+
+	public void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
