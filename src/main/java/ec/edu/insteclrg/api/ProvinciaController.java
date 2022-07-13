@@ -10,7 +10,7 @@ import ec.edu.insteclrg.dto.ProvinciaDTO;
 import ec.edu.insteclrg.service.ProvinciaService;
 
 @RestController
-@RequestMapping(value="/api/provincia/")
+@RequestMapping("/api/provincia")
 public class ProvinciaController {
 	
 	@Autowired
