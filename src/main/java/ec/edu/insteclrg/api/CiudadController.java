@@ -6,19 +6,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ec.edu.insteclrg.dto.ProvinciaDTO;
-import ec.edu.insteclrg.service.ProvinciaService;
-
+import ec.edu.insteclrg.dto.CiudadDTO;
+import ec.edu.insteclrg.service.CiudadService;
 @RestController
-@RequestMapping(value="/api/provincia/")
-public class ProvinciaController {
+@RequestMapping(value="/api/ciudad/")
+class CiudadController {
 	
 	@Autowired
-	ProvinciaService provinciaService;
+	CiudadService ciudadService;
 	
 	@PostMapping
-	public String nuevo(@RequestBody ProvinciaDTO provinciaDTO) {
-		provinciaService.guardar(provinciaDTO);
+	public String nuevo(@RequestBody CiudadDTO ciudadDTO) {
+		ciudadService.guardar(ciudadDTO);
 		return "guardado correctamente";
 	}
 }

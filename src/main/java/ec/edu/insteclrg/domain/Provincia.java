@@ -9,21 +9,16 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity//(name="PROVINCIAS")
+@Getter
+@Setter
+@Entity
 public class Provincia {
 	
 	@Id
-	@Getter
-	@Setter
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(updatable=false,nullable=false)
 	private Long id;
 	
-	@Column(nullable=false, unique= true)
+	@Column(nullable=false)
 	private String nombre;
-
-	public void setNombre(String nombre2) {
-		// TODO Auto-generated method stub
-		
-	}
 }

@@ -8,14 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
+@Data
+@Getter
+@Setter
 @Entity
 public class Ciudad {
 	@Id
-	@Getter
-	@Setter
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(updatable = false, nullable = false)
 	private Long id;
@@ -25,5 +26,5 @@ public class Ciudad {
 	
 	@ManyToOne
 	@JoinColumn
-	private Provincia provincia;
-}
+	private Provincia provincia;	
+	}
